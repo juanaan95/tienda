@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+}
+
+header, footer {
+  width: 100%;
+  background-color: bisque;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header > h1 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+header > nav > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+
+.carrito, .admin {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.carritoTabla, .clientesTabla {
+  width: 50%;
+}
+
+.carritoTabla th, .clientesTabla th {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.carritoTabla td, .carritoTabla th, .clientesTabla td, .clientesTabla th {
+  padding: 5px;
+}
+
+.clientesTabla td:has(button), .clientesTabla th:has(button) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.clientesTabla button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  font-size: 18px;
+}
+
+.admin form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+  gap: 10px;
+}
