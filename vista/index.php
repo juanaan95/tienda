@@ -8,11 +8,11 @@ if (isset($_SESSION['alert_message'])) {
     unset($_SESSION['alert_message']);
 }
 ?>
-<main>
-    <h2>Bienvenido a nuestra tienda online</h2>
-    <p>Explora nuestras zapatillas deportivas y haz tus compras fácilmente.</p>
-    <?php 
-            echo 'Bienvenido, ' . $_SESSION['usuario_nombre'] ;
-    ?>
-</main>
+<?php 
+        if (isset($_SESSION['usuario_nombre'])) {
+            echo 'Bienvenido, ' . htmlspecialchars($_SESSION['usuario_nombre']);
+        } else {
+            echo 'Bienvenido, invitado. Inicia sesión para una experiencia personalizada.';
+        }
+?>
 <?php include '../templates/footer.php'; ?>
